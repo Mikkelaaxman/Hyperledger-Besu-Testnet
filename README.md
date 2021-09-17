@@ -1,19 +1,3 @@
-**# Local besu lockchain #**
-
-1. Generate the keys and the basic genesis file for each node.
-
-```bash
-
-docker-compose up -f docker-compose.setup.yml
-
-```
-
-2. Copy the keypairs from the newly created /networkFiles/keys/{node eth adress} folder to the directory of each node.
-
-3. Copy the "extraData":{} portion of /networkFiles/genesis.json to ./setupfiles/genesis.json. and replace the existing "extraData":{}.
-
-you can modify the e
-
 # Local Hyperledger Besu Blockchain
 
 ## Basic Setup
