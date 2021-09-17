@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    besu:
+        ports:
+            - '8546:8546'
+        image: 'hyperledger/besu:latest'
+        volumes:
+          - ./setupFiles:/opt/besu/setupFiles
+          - ./networkFiles:/opt/besu/networkFiles
+        entrypoint: 
+          - /bin/bash
+          - -c
+          - /opt/besu/bin/besu operator generate-blockchain-config --config-file=./setupFiles/templateGenesis.json --to=networkFiles --private-key-file-name=key

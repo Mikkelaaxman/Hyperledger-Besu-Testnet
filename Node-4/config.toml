@@ -1,0 +1,27 @@
+# Valid TOML config file
+data-path="./nodeData" # Path
+
+bootnodes=["enode://bbdf05994421e01d21d5a8cc5c00bf568e393ea7cf3473aae687ddaef378397dfaa1e2ce607b2e6e6de8b8d6db474dc4fcb2375b4442f6f42b0d4a07a309e96e@127.0.0.1:30303"]
+
+# Network
+discovery-enabled=true
+p2p-interface="0.0.0.0"
+
+nat-method="DOCKER"
+p2p-port=30306
+rpc-http-port=8548
+rpc-http-api=["ETH","NET","IBFT"]
+rpc-ws-port=9102
+
+
+# Permissions
+host-allowlist=["*"]
+rpc-http-cors-origins=["*"]
+
+# Chain
+genesis-file="./setupFiles/genesis.json" # Path to the custom genesis file
+min-gas-price=0
+
+# Mining
+miner-enabled=true
+miner-coinbase='0x0000000000000000000000000000000000000000'

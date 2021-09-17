@@ -1,0 +1,30 @@
+{
+  "genesis": {
+      "config" : {
+        "chainId" : 8008136,
+        "muirglacierblock" : 0,
+        "ibft2" : {
+          "blockperiodseconds" : 2,
+          "epochlength" : 30000,
+          "requesttimeoutseconds" : 4
+        }
+      },
+      "nonce" : "0x0",
+      "timestamp" : "0x0",
+      "gasLimit" : "10000000000",
+      "difficulty" : "1",
+      "mixHash" : "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "coinbase" : "0x0000000000000000000000000000000000000000",
+      "alloc" : {
+        "2fb31Be3D66eC6910d93Af3D89EcBd5f61A5C373": {
+          "balance":"1000000000000000000000000"
+        }
+      }
+    },
+  "blockchain": {
+    "nodes": {
+      "generate": true,
+        "count": 4
+    }
+  }
+}

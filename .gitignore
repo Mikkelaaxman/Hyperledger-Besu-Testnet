@@ -1,0 +1,9 @@
+#Generated networkFiles
+/networkFiles/
+
+#Files in each node directory
+/Node-*/database/
+/Node-*/uploads/
+/Node-*/caches/
+/Node-*/*.json
+/Node-*/key*

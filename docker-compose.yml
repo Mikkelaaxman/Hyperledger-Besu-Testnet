@@ -1,0 +1,53 @@
+version: '3.3'
+services:
+    besu-node-1:
+        ports:
+            - '30303:30303'
+            - '8545:8545'
+        image: 'hyperledger/besu:latest'
+        volumes:
+          - ./setupFiles:/opt/besu/setupFiles
+          - ./Node-1:/opt/besu/nodeData
+        entrypoint: 
+          - /bin/bash
+          - -c
+          - /opt/besu/bin/besu --config-file=/opt/besu/nodeData/config.toml
+
+    besu-node-2:
+        ports:
+            - '30304:30304'
+            - '8546:8546'
+        image: 'hyperledger/besu:latest'
+        volumes:
+          - ./setupFiles:/opt/besu/setupFiles
+          - ./Node-2:/opt/besu/nodeData
+        entrypoint: 
+          - /bin/bash
+          - -c
+          - /opt/besu/bin/besu --config-file=/opt/besu/nodeData/config.toml --bootnodes="enode://a8c0d48ce270dcab814c2792bac04416b7463695dbd9e88dda7a51d9cc54857d6c6d61ee00f4ac1b344d0af4ea06d5c433cbae635f01c2a1d958c51eb54ab33f@127.0.0.1:30303"
+
+    besu-node-3:
+        ports:
+            - '30305:30305'
+            - '8547:8547'
+        image: 'hyperledger/besu:latest'
+        volumes:
+          - ./setupFiles:/opt/besu/setupFiles
+          - ./Node-3:/opt/besu/nodeData
+        entrypoint: 
+          - /bin/bash
+          - -c
+          - /opt/besu/bin/besu --config-file=/opt/besu/nodeData/config.toml --bootnodes="enode://a8c0d48ce270dcab814c2792bac04416b7463695dbd9e88dda7a51d9cc54857d6c6d61ee00f4ac1b344d0af4ea06d5c433cbae635f01c2a1d958c51eb54ab33f@127.0.0.1:30303"
+    
+    besu-node-4:
+        ports:
+            - '30306:30306'
+            - '8548:8548'
+        image: 'hyperledger/besu:latest'
+        volumes:
+          - ./setupFiles:/opt/besu/setupFiles
+          - ./Node-4:/opt/besu/nodeData
+        entrypoint: 
+          - /bin/bash
+          - -c
+          - /opt/besu/bin/besu --config-file=/opt/besu/nodeData/config.toml --bootnodes="enode://a8c0d48ce270dcab814c2792bac04416b7463695dbd9e88dda7a51d9cc54857d6c6d61ee00f4ac1b344d0af4ea06d5c433cbae635f01c2a1d958c51eb54ab33f@127.0.0.1:30303"
