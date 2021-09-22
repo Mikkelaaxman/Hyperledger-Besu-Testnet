@@ -1,9 +1,7 @@
 version: '3.3'
 services:
     besu-node-1:
-        ports:
-            - '30303:30303'
-            - '8545:8545'
+        network_mode: "host"
         image: 'hyperledger/besu:latest'
         volumes:
           - ./setupFiles:/opt/besu/setupFiles
@@ -14,9 +12,7 @@ services:
           - /opt/besu/bin/besu --config-file=/opt/besu/nodeData/config.toml
 
     besu-node-2:
-        ports:
-            - '30304:30304'
-            - '8546:8546'
+        network_mode: "host"
         image: 'hyperledger/besu:latest'
         volumes:
           - ./setupFiles:/opt/besu/setupFiles
@@ -27,9 +23,7 @@ services:
           - /opt/besu/bin/besu --config-file=/opt/besu/nodeData/config.toml --bootnodes="enode://a8c0d48ce270dcab814c2792bac04416b7463695dbd9e88dda7a51d9cc54857d6c6d61ee00f4ac1b344d0af4ea06d5c433cbae635f01c2a1d958c51eb54ab33f@127.0.0.1:30303"
 
     besu-node-3:
-        ports:
-            - '30305:30305'
-            - '8547:8547'
+        network_mode: "host"
         image: 'hyperledger/besu:latest'
         volumes:
           - ./setupFiles:/opt/besu/setupFiles
@@ -40,9 +34,7 @@ services:
           - /opt/besu/bin/besu --config-file=/opt/besu/nodeData/config.toml --bootnodes="enode://a8c0d48ce270dcab814c2792bac04416b7463695dbd9e88dda7a51d9cc54857d6c6d61ee00f4ac1b344d0af4ea06d5c433cbae635f01c2a1d958c51eb54ab33f@127.0.0.1:30303"
     
     besu-node-4:
-        ports:
-            - '30306:30306'
-            - '8548:8548'
+        network_mode: "host"
         image: 'hyperledger/besu:latest'
         volumes:
           - ./setupFiles:/opt/besu/setupFiles

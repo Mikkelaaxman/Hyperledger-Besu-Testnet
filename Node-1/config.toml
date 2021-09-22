@@ -1,6 +1,6 @@
 # Valid TOML config file
-data-path="./nodeData" # Path
-logging="DEBUG"
+data-path="nodeData/" # Path
+logging="TRACE"
 
 # Network
 discovery-enabled=true
@@ -20,9 +20,5 @@ host-allowlist=["*"]
 rpc-http-cors-origins=["*"]
 
 # Chain
-genesis-file="./setupFiles/genesis.json" # Path to the custom genesis file
+genesis-file="setupFiles/genesis.json" # Path to the custom genesis file
 min-gas-price=0
-
-# Mining
-miner-enabled=true
-miner-coinbase='0x0000000000000000000000000000000000000000'
