@@ -16,15 +16,16 @@ docker-compose up -f docker-compose.setup.yml
 docker-compose up
 ```
 
-1. Each node has a config file in its directory. Paste the enode url in the bootnode section of the config.toml file in each directory. It should look something like this:
+4. Each node has a config file in its directory. Paste the enode url in the bootnode section of the config.toml file in each directory. It should look something like this:
 
 ```bash
 bootnodes=["enode://bbdf05994421e01d21d5a8cc5c00bf568e393ea7cf3473aae687ddaef378397dfaa1e2ce607b2e6e6de8b8d6db474dc4fcb2375b4442f6f42b0d4a07a309e96e@127.0.0.1:30303"]
 ```
 
-1. Restart the stack. So it knows the bootnode of the network is node-1.
+5. Restart the stack. So it knows the bootnode of the network is node-1.
+6. Everything should now be fully operational. You can now connect your metamask with the network and use your pre funded accounts.
 
-> This is where stuff stops working. Perhaps the network section of the config file has issues. Or the config file itself is wrong. Something there i guess. Or the docker-compose file has the wrong ports or something idk.
+
 
 ## Modifying parameters
 
